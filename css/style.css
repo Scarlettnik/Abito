@@ -1,0 +1,572 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #0a143a; /* цвет текста */
+  }
+  .container {
+    max-width: 1146px;
+    margin: auto;
+  }
+  .header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 12px;
+  }
+  
+  .navbar {
+    display: flex; /* делаем гибкий блок */
+    align-items: center; /* выравниваем по вертикали по центру */
+    justify-content: space-between; /* разбросать элементы по краям */
+    margin-bottom: 24px;
+  }
+  .navbar-panel{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+  /* меню в шапке */
+  .navbar-menu {
+    margin-right: auto; /* автоматический отступ справа */
+  }
+  .menu {
+    list-style-type: none; /* убираем точки */
+    margin: 0; /*обнуляем отступ*/
+    padding-left: 22px; /* внутренний отступ слева 22 пикселя */
+    padding-right: 22px; /* внутренний отступ справа 22 пикселя */
+    display: flex;
+  }
+  /* для всех пунктов меню кроме последнего */
+  .menu-item:not(:last-child) {
+    margin-right: 14px; /* отступ справа */
+  }
+  .menu-link {
+    text-decoration: none; /* отключаем подчёркивание ссылок */
+    color: inherit;
+    /* возьми цвет текста как у родителя (body)*/
+  }
+  .button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px; /* сверху и снизу 10 пикселей, а по бокам 15 */
+    cursor: pointer;
+  }
+  .button-link {
+    color: inherit;
+  }
+  .button-primary {
+    background: #256eeb; /* фон */
+    border-radius: 5px; /* скругление углов */
+    color: white;
+  }
+  .search-panel {
+    height: 50px;
+    background: #256eeb;
+    border-radius: 5px;
+    display: flex;
+    padding: 3px;
+  }
+  .search-input {
+    flex-grow: 1; /* рястягивается на всё свободное место */
+    background: #ffffff;
+    border-radius: 5px;
+    border: none; /* отключаем обводку */
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .search-button {
+    background: #256eeb;
+    border: none;
+    color: white;
+    padding-left: 20px;
+    padding-right: 17px;
+    display: flex;
+    align-items: center;
+  }
+  .seach-icon{
+    margin-right: 5px;
+  }
+  .search-button-text {
+    margin-bottom: 5px;
+  }
+  .page-content2 {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    grid-column-gap: 10px;
+  }
+  .page-content {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  grid-column-gap: 10px;
+}
+  .card-image {
+    border-radius: 10px;
+    width: 264px;
+    height: 178px;
+    object-fit: cover;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card {
+    margin-bottom: 20px;
+    margin-right: 15px;
+  }
+  .card-title {
+    max-width: 224px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #256eeb;
+    margin-top: 12px;
+    margin-bottom: 5px;
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .like {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  .card-link {
+    text-decoration: none;
+  }
+  .card-price {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .card-text {
+    font-size: 14px;
+    line-height: 16px;
+    color: #c4c4c4;
+    margin-bottom: 4px;
+    margin-top: 0px;
+  }
+  .sidebar .page-title {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .service {
+    margin-bottom: 25px;
+  }
+  .service-title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+  }
+  .service-text {
+    font-size: 14px;
+    line-height: 16px;
+    max-width: 217px;
+  }
+  .footer-text {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 16px;
+    color: #c4c4c4;
+    margin-bottom: 5px;
+  }
+  .footer-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 16px;
+  }
+  .footer-link {
+    color: inherit;
+    text-decoration: none;
+  }
+  .main-single {
+    display: flex;
+    align-items: flex-start;
+  }
+  .content {
+    max-width: 460px;
+    margin-right: 30px;
+  }
+  .swiper-container {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .mySwiper2 {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+  
+  .mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+    border-radius: 10px;
+  }
+  
+  .mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+  .content-text {
+    font-size: 14px;
+    line-height: 140%;
+  }
+  .single-price {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+  .page-title {
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+  .author {
+    width: 264px;
+  }
+  .author-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+  .author-avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .author-name {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .rating {
+    margin-bottom: 5px;
+  }
+  .rating-counter {
+    margin-left: 10px;
+    opacity: 0.5;
+  }
+  .author-status {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .button-block {
+    display: block;
+    width: 100%;
+    height: 54px;
+    margin-bottom: 14px;
+    border: none;
+  }
+  .button-success {
+    background-color: #14b4be;
+    border-radius: 5px;
+    color: #ffffff;
+  }
+  .menu-button{
+    background-color:#ffffff;
+    border:none;
+    cursor: pointer;
+    display: none;
+  }
+  .close-menu{
+    display: none;
+  }
+  .pract{
+      display: block;
+      width: 100%;
+      height: 54px;
+      margin-bottom: 14px;
+      border: none;
+      background-color: #256eeb;
+border-radius: 5px;
+color: #ffffff;
+    }  
+    .button_for_search{
+      display: block;
+    }
+  
+  @media (max-width: 1200px){
+    .container{
+      max-width: 960px;
+    }
+    .card{
+      width: 45%;
+    }
+    .card-image{
+      width: 100%;
+      height: 200px;
+    }
+  }
+  @media (max-width: 992px){
+   .container{
+     max-width: 740px;
+   }
+   .card-image{
+     height: 150px;
+    } 
+    .page-content2 {
+      grid-template-columns: 12fr;
+    }
+   }
+  @media (max-width: 768px){
+
+    .container{
+      max-width: 560px;
+    }
+    .card{
+      width: 100%;
+    }
+    .page-content{
+      grid-template-columns: 8fr 4fr;
+    }
+    .menu-button{
+      display: block;
+    }
+    .close-menu{
+      display: block;
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      cursor: pointer;
+      background-color:#ffffff;
+      border: none;
+    }
+    .navbar-panel{
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color:#ffffff;
+      z-index: 9;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, opacity 0.2s ;
+      transform: translate(100%);/*Убираем меню в сторону*/
+      opacity: 0;
+    }
+    .is-open{
+      transform: translate(0%);
+      opacity: 1;
+    }
+    .navbar-menu{
+      margin-left: auto;
+      margin-bottom: 20px;
+    }
+    .menu{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .menu-item:not(:last-child){
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    .button-group{
+      display: flex;
+      flex-direction: column;
+    }
+    .main-single{
+      display: inline-block;
+      margin: auto;
+    }
+    .page-content2{
+      grid-template-columns: 12fr;
+    }
+    .footer-link{
+      display: flex;
+    }
+    .author{
+      width: 90%;
+    }
+
+  }
+  @media (max-width: 576px){
+    .container{
+      max-width: 90%;
+    }
+    .page-content{
+      grid-template-columns: 12fr;
+    }
+    .card-image{
+      max-width:450px;
+      height: 250px;
+    }
+    .card{
+      margin-right: 10px;
+    }
+    .search-button-text{
+      display: none;
+    }
+    .mySwiper2 {
+      max-width: 80%;
+    }
+    .page-content2{
+      margin: auto;
+    }
+    .swiper-container {
+      width: 80%;
+    }
+    .navbar-panel{
+      position: fixed;
+      right: -50;
+      top: -50;
+      width: 100%;
+      height: 100%;
+      background-color:#ffffff;
+      z-index: 9;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, opacity 0.2s ;
+      transform: translate(100%);/*Убираем меню в сторону*/
+      opacity: 0;
+    }
+    .is-open{
+      transform: translate(0%);
+      opacity: 1;
+    }
+    .navbar-menu{
+      margin-left: auto;
+      margin-bottom: 20px;
+    }
+    
+  }
+  @media (max-width: 505px){
+  .mySwiper2 {
+    max-width: 70%;
+  }
+  .swiper-container {
+    max-width: 70%;
+  }
+  .author{
+    max-width:70%;
+    margin: auto;
+  }
+  .content-text{
+    max-width: 301px;
+    margin: auto;
+  }
+  .sidebar{
+    margin: 15%;
+  }
+  .page-title{
+    margin-left: 18%;
+  }
+}
+@media (max-width: 450px){
+.content{
+  max-width: 430px;
+}
+  .mySwiper2 {
+    max-width: 70%;
+    margin: 5%;
+  }
+  .swiper-container {
+    max-width: 70%;
+    margin: 5%;
+  }
+  .author{
+    max-width:70%;
+    margin: 5%;
+  }
+  .content-text{
+    max-width: 270px;
+    margin: 5%;
+  }
+  .sidebar{
+    margin: 10%;
+  }
+  .page-title{
+    margin-left: 10%;
+  }
+}
+@media (max-width: 415px){
+.content{
+  max-width: 394px;
+}
+.content-text{
+  max-width: 315.1px;
+}
+.close-menu{
+  margin-right: 3%;
+}
+.mySwiper2 {
+  max-width: 92%;
+  margin: 4%;
+}
+.swiper-container {
+  max-width: 92%;
+  margin: 4%;
+}
+.author{
+  max-width: 315.1px;
+}
+.sidebar{
+  max-width: 315.2px;
+}
+}
+@media (max-width: 390px){
+  .content{
+    max-width: 370px;
+  }
+  .mySwiper2 {
+    max-width: 304px;
+    margin: 3%;
+  }
+  .swiper-container {
+    max-width: 80%;
+    margin: 3%;
+  }
+  .author{
+    max-width:296px;
+    margin: 3%;
+  }
+  .content-text{
+    max-width: 300.1px;
+    margin: 3%;
+  }
+  .sidebar{
+    margin: 6%;
+  }
+  .page-title{
+    margin-left: 6%;
+  }
+  .close-menu{
+    max-width: 350px;
+  }
+  .close-menu{
+    margin-right: 2%;
+  }
+}
